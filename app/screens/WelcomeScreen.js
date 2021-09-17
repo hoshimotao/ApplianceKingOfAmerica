@@ -1,18 +1,29 @@
 import React from "react";
 import { StyleSheet, Text, ImageBackground, View, Image } from "react-native";
+import AppButton from "../components/AppButton";
+import colors from "../config/colors";
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
+      blurRadius={1.75}
       source={require("../assets/background.jpg")}
       style={styles.background}
     >
-      <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text>Sell What You Don't Need</Text>
+      <Image
+        style={styles.logoContainer}
+        resizeMode="contain"
+        style={styles.logo}
+        source={require("../assets/koa-logo.png")}
+      />
+
+      <Text style={styles.tagline}>Appliance KOA</Text>
+      <Text style={styles.tagline}>EST. 1946</Text>
+
+      <View style={styles.buttonsContainer}>
+        <AppButton title="Login" color="gold" />
+        <AppButton title="Register" color="black" />
       </View>
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
     </ImageBackground>
   );
 }
@@ -23,20 +34,24 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
-  loginButton: {
-    height: 70,
+  buttonsContainer: {
     width: "100%",
-    backgroundColor: "#fc5c65",
+    padding: 20,
   },
   logo: {
-    width: 100,
-    height: 100,
-  },
-  logoContainer: { position: "absolute", top: 70, alignItems: "center" },
-  registerButton: {
-    height: 70,
     width: "100%",
-    backgroundColor: "#4ecdc4",
+    height: 300,
+    justifyContent: "center",
+    alignItems: "center",
+    top: -50
+  },
+  logoContainer: { position: "absolute", top: 25, alignItems: "center" },
+  tagline: {
+    fontSize: 25,
+    fontWeight: "700",
+    color: colors.white,
+    textAlign: "center",
+    textTransform: "uppercase",
   },
 });
 
