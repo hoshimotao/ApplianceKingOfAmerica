@@ -10,12 +10,12 @@ function ListingDetailScreen(props) {
       <Image style={styles.image} source={require("../assets/jacket.jpg")} />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>Red Jacket For Sale</AppText>
-        <AppText style={styles.subTitle}>$100</AppText>
+        <AppText style={styles.description}>$100</AppText>
         <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/mosh.jpg")}
             title="Jimmy Thomas"
-            subTitle="5 Listings"
+            description="5 Listings"
           ></ListItem>
         </View>
       </View>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
   },
-  subTitle: { color: colors.secondary, fontSize: 20 },
+  description: { color: colors.secondary, fontSize: 20 },
   title: { fontSize: 24 },
   userContainer: { marginTop: 50 },
 });

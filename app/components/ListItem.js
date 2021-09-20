@@ -3,13 +3,13 @@ import { View, StyleSheet, Image } from "react-native";
 import AppText from "./AppText/AppText";
 import colors from "../config/colors";
 
-function ListItem({ title, subTitle, image }) {
+function ListItem({ title, description, image }) {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={image} />
       <View>
         <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
+        <AppText style={styles.description}>{description}</AppText>
       </View>
     </View>
   );
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   listDetailsContainer: {},
-  subTitle: {
+  description: {
     color: colors.medium,
     fontSize: 20,
   },
