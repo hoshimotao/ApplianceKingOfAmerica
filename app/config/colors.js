@@ -6,4 +6,5 @@ export default {
   gold: "#ffd700",
   medium: "#6e6969",
   light: "#ECECEC",
+  danger: "#ff5252",
 };
