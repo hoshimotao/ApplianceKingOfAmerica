@@ -1,10 +1,10 @@
 import React from "react";
-import { FlatList, View, StyleSheet } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import ListItem from "../components/ListItem";
-import Constants from "expo-constants";
 import Screen from "../components/Screen";
+import ListItemSeparator from "../components/ListItemSeparator";
 
-console.log(Constants);
+console.log("Message Screen");
 const messages = [
   {
     id: 1,
@@ -32,10 +32,17 @@ function MessagesScreen(props) {
             title={item.title}
             description={item.description}
             image={item.image}
+            onPress={() => console.log("Message Selected!", item.Object)}
+            renderRightActions={() => (
+              <View style={{ backgroundColor: "red", width: 70 }}></View>
+            )}
           />
         )}
+        ItemSeparatorComponent={ListItemSeparator}
       />
     </Screen>
   );
 }
+
+const styles = StyleSheet.create({});
 export default MessagesScreen;

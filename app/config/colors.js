@@ -5,4 +5,5 @@ export default {
   white: "#fff",
   gold: "#ffd700",
   medium: "#6e6969",
+  light: "#ECECEC",
 };

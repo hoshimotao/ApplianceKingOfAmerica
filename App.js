@@ -7,7 +7,8 @@ import Card from "./app/components/Card";
 import ListingDetailScreen from "./app/screens/ListingDetailScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
+import "react-native-gesture-handler";
 
 export default function App() {
-  return <MessagesScreen />; 
+  return <MessagesScreen />;
 }
